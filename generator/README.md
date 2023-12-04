@@ -1,5 +1,11 @@
 # qr-generator
-Generador de QRs basico. El programa se encuentra en proceso, de momento solo puedes alterar el link que se encuentra en el mismo y colocar lo que gustes, luego ejecuta el programa y se generará un QR con esa dirección. 
+Generador de QRs WIFI. 
+No realicé GUI por seguridad, para que tu te puedas sentir comodo al ejecutar el codigo desde tu PC.
 
+<li>PASOS</li>
+<ol>1 - En la funcion main colocar el nombre de tu WIFI y la contraseña en donde se encuentra señalado.</ol>
+<ol>2 - Ejecuta el comando "go run main.go", el mismo pondrá en funcionamiento el programa.</ol>
+<ol>3 - Se generará tu QR dentro de la misma carpeta del proyecto ("QR/generator") </ol>
+<ol>4 - Lo abres y ya puedes escanearlo para conectarte a una red WIFI </ol>
 
 Se utilizó el modulo GO-QRCODE de skip2.
