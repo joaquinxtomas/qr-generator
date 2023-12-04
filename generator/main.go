@@ -9,20 +9,27 @@ import (
 
 func main() {
 
-	archivo, err := os.Create("qr.png")
+	qrGenerator("WIFI USER", "WIFI PASSWORD")
+
+}
+
+func qrGenerator(user, password string) error {
+	wifiData := fmt.Sprintf("WIFI:T:WPA;S:%s;P:%s;;", user, password)
+	arch, err := os.Create("qr.png")
 
 	if err != nil {
-		return
+		fmt.Println(err.Error())
 	}
 
-	defer archivo.Close()
+	defer arch.Close()
 
-	err = qrcode.WriteFile("www.google.com", qrcode.Medium, 256, "qr.png")
+	err = qrcode.WriteFile(wifiData, qrcode.Medium, 256, "qr.png")
 
 	if err != nil {
-		return
+		fmt.Println(err.Error())
 	}
 
-	fmt.Println("QR HECHO")
+	fmt.Println("QR REALIZADO CORRECTAMENTE.")
 
+	return nil
 }
